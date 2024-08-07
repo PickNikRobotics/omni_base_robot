@@ -2,6 +2,12 @@
 Changelog for package omni_base_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use controller_type from the controllers config
+* Remove use_stamped_vel parameter
+* Contributors: Noel Jimenez
+
 2.0.19 (2024-07-09)
 -------------------
 * Add warning for pal_module_cmake not found
