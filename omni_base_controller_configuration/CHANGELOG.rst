@@ -2,8 +2,8 @@
 Changelog for package omni_base_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.1.0 (2024-08-07)
+------------------
 * Use controller_type from the controllers config
 * Remove use_stamped_vel parameter
 * Contributors: Noel Jimenez
