@@ -2,8 +2,8 @@
 Changelog for package omni_base_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.2.0 (2024-08-08)
+------------------
 * Use unlesscondition
 * start mobile_base_controller only for real robot
 * Contributors: David ter Kuile, antoniobrandi
