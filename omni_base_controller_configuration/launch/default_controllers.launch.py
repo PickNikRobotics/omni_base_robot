@@ -19,7 +19,8 @@ from ament_index_python.packages import get_package_share_directory
 from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, GroupAction
-from launch.conditions import LaunchConfigurationNotEquals
+from launch.substitutions import LaunchConfiguration
+from launch.conditions import UnlessCondition
 from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase
 
@@ -56,7 +57,7 @@ def declare_actions(
                     pkg_share_folder, 'config', 'mobile_base_controller.yaml')
             )
         ],
-        condition=LaunchConfigurationNotEquals('use_sim_time', 'True')
+        condition=UnlessCondition(LaunchConfiguration('use_sim_time'))
     )
     launch_description.add_action(base_controller)
 
