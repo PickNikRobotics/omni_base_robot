@@ -2,6 +2,11 @@
 Changelog for package omni_base_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* start mobile_base_controller only for real robot
+* Contributors: antoniobrandi
+
 2.1.0 (2024-08-07)
 ------------------
 
