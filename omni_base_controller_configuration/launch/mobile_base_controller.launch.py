@@ -21,6 +21,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, GroupAction
 from launch.substitutions import LaunchConfiguration
 from launch.conditions import UnlessCondition
+from launch_ros.actions import Node
 from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase
 
@@ -48,6 +49,18 @@ def declare_actions(
     launch_description: LaunchDescription, launch_args: LaunchArguments
 ):
     pkg_share_folder = get_package_share_directory('omni_base_controller_configuration')
+
+    # Temporary Fix when using rolling version of ros2 control
+    twist_relay = Node(
+        package='topic_tools',
+        executable='relay_field',
+        name='twist_relay',
+        arguments=['/mobile_base_controller/cmd_vel', '/mobile_base_controller/cmd_vel_unstamped',
+                   'geometry_msgs/Twist', '{linear: m.twist.linear, angular: m.twist.angular}'],
+        condition=UnlessCondition(LaunchConfiguration('is_public_sim'))
+    )
+
+    launch_description.add_action(twist_relay)
 
     # Base controller
     base_controller = GroupAction(
