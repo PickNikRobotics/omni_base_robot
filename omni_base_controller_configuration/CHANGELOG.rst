@@ -2,8 +2,8 @@
 Changelog for package omni_base_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.0 (2024-08-29)
+------------------
 * use relay for cmd_vel message
 * Refactor mobile base controller
 * Contributors: David ter Kuile

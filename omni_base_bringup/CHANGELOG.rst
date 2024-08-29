@@ -2,8 +2,8 @@
 Changelog for package omni_base_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.3.0 (2024-08-29)
+------------------
 * use relay for cmd_vel message
 * Contributors: David ter Kuile
 
