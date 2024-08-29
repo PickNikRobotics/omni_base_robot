@@ -2,6 +2,12 @@
 Changelog for package omni_base_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* use relay for cmd_vel message
+* Refactor mobile base controller
+* Contributors: David ter Kuile
+
 2.2.0 (2024-08-08)
 ------------------
 * Use unlesscondition
