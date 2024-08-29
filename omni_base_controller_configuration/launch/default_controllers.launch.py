@@ -27,6 +27,7 @@ from launch_pal.include_utils import include_scoped_launch_py_description
 @dataclass(frozen=True)
 class LaunchArguments(LaunchArgumentsBase):
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
+    is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
 
 
 def generate_launch_description():
@@ -54,6 +55,7 @@ def declare_actions(
         paths=['launch', 'mobile_base_controller.launch.py'],
         launch_arguments={
             'use_sim_time': launch_args.use_sim_time,
+            'is_public_sim': launch_args.is_public_sim,
         }
     )
     launch_description.add_action(base_controller)
