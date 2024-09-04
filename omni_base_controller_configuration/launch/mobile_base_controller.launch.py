@@ -20,7 +20,8 @@ from controller_manager.launch_utils import generate_load_controller_launch_desc
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, GroupAction
 from launch.substitutions import LaunchConfiguration
-from launch.conditions import UnlessCondition
+from launch.conditions import IfCondition, UnlessCondition
+from launch.substitutions import PythonExpression
 from launch_ros.actions import Node
 from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase
@@ -57,8 +58,17 @@ def declare_actions(
         name='twist_relay',
         arguments=['/mobile_base_controller/cmd_vel', '/mobile_base_controller/cmd_vel_unstamped',
                    'geometry_msgs/Twist', '{linear: m.twist.linear, angular: m.twist.angular}'],
-        condition=UnlessCondition(LaunchConfiguration('is_public_sim'))
-    )
+        condition=IfCondition(
+            PythonExpression(
+                [
+                    "'",
+                    LaunchConfiguration('is_public_sim'),
+                    "' != 'True' and '",
+                    LaunchConfiguration('use_sim_time'),
+                    "' == 'True'"
+                ]
+            )
+        ))
 
     launch_description.add_action(twist_relay)
 
