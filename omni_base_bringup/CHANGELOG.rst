@@ -2,6 +2,11 @@
 Changelog for package omni_base_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add slash to node names on parameter files
+* Contributors: Noel Jimenez
+
 2.3.0 (2024-08-29)
 ------------------
 * use relay for cmd_vel message

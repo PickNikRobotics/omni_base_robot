@@ -2,6 +2,11 @@
 Changelog for package omni_base_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Only relay cmd_vel topic in simulation
+* Contributors: David ter Kuile
+
 2.3.0 (2024-08-29)
 ------------------
 * use relay for cmd_vel message
