@@ -29,6 +29,7 @@
   <xacro:arg name="add_on_module" default="no-add-on"/>
 
   <!-- Execution env config -->
+  <xacro:arg name="include_ros2_control" default="true"/>
   <xacro:arg name="use_sim_time" default="false"/>
   <xacro:arg name="is_multiple" default="false"/>
   <xacro:arg name="namespace" default=""/>
@@ -75,8 +76,10 @@
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
 
   <!-- ROS 2 Control -->
-  <xacro:include filename="$(find omni_base_description)/ros2_control/ros2_control.urdf.xacro" />
-  <xacro:omni_base_ros2_control />
+  <xacro:if value="$(arg include_ros2_control)">
+    <xacro:include filename="$(find omni_base_description)/ros2_control/ros2_control.urdf.xacro" />
+    <xacro:omni_base_ros2_control />
+  </xacro:if>
 
   <!-- ROBOT DEFINITION -->
 
