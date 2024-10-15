@@ -29,7 +29,7 @@
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_decrease
-      buttons: [8,1]
+      buttons: [8, 1]
 
     joy_turbo_increase:
       type: action
