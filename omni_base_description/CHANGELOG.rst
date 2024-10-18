@@ -2,6 +2,14 @@
 Changelog for package omni_base_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tpe/fix_base_inertia' into 'humble-devel'
+  Remove unwanter base inertia
+  See merge request robots/omni_base_robot!46
+* Remove unwanter base inertia
+* Contributors: thomas.peyrucain, thomaspeyrucain
+
 2.4.1 (2024-10-15)
 ------------------
 
